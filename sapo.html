@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="stylesheet" href="sapao.css">
+    <meta charset="UTF-8">
+    <title>Pergunte ao çapo</title>
+</head>
+<body class="main">
+    <script>
+        function escolha(){
+            var arr = [document.getElementById("primeiraopt").value, document.getElementById("segundaopt").value];
+            if(arr[0] === "" || arr[1] === ""){
+                alert("Preencha os dois campos de texto.");
+                return;
+            }
+            var index = Math.floor(Math.random() * arr.length);
+            var respFinal = arr[index];
+            veredito(respFinal);
+            return;
+        }
+        function veredito(respFinal){
+            var resposta = document.createElement("h2");
+            var txtresp  = document.createTextNode(respFinal);
+            resposta.appendChild(txtresp);
+            document.getElementById("primeiraopt").remove();
+            document.getElementById("segundaopt").remove();
+            document.getElementById("butao").remove();
+            document.getElementById("spanbt").remove();
+            document.getElementById("textoPrincipal").innerHTML = "O sábio çapo fez sua escolha:";
+            var divo = document.getElementById("divcent");
+            var brs = document.getElementsByTagName('br');
+            while (brs.length) {
+                divo.removeChild(brs[0]);
+            }
+            divo.appendChild(resposta);
+            return;
+        }
+    </script>
+    <div id="divcent">
+        <img src="./phrog.png" alt="çapo" class="sapo">
+        <h1> Pergunte ao sábio Çapo </h1>
+        <h2 id="textoPrincipal">Digite as opções: </h2>
+        <input type="text" class="inputexto" placeholder="based" value="" id="primeiraopt"/>
+        <span id="spanbt">ou</span>
+        <input type="text" class="inputexto" placeholder="cringe" value="" id="segundaopt"/>
+        </br>
+        </br>
+        <input type="button" onclick="escolha()" value="Escolher!" id="butao"/>
+    </div>
+</body>
+</html>

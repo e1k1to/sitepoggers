@@ -1,0 +1,30 @@
+.main {
+    background-color: rgb(192, 214, 250);
+}
+#divcent {
+    text-align: center;
+    background-color: rgb(128, 89, 255);
+    margin: auto;
+    align-items: center;
+    border-radius: 5px;
+    width:50%;
+    padding-bottom:30px;
+}
+.sapo {
+    width: 100%;
+    border-radius: 5px;
+    height: auto;
+}
+#butao {
+    width: 50%;
+    height: 50px;
+}
+#spanbt {
+    margin: 0 3% 0 3%;
+}
+.inputexto {
+    height: 30px;
+    border: 0;
+    border-radius: 3px;
+    width: 35%;
+}
